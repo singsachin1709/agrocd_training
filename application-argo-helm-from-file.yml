@@ -10,13 +10,8 @@ spec:
   source:
     helm:
       releaseName: lwapphelm1
-      parameters:
-        - name: "replicatCount"
-          value: "5"
-        - name: "imagerepository"
-          value: "vimal13/apache-webserver-php"
-        - name: "image.tag"
-          value: "latest"
+      valuesFiles:
+        - custom_values_for_argo_helm.yml
     repoURL: https://github.com/singsachin1709/agrocd_training.git
     path: myHelmCharts/lwchart
     targetRevision: main
