@@ -6,7 +6,7 @@ metadata:
     app: lwweb
   name: lwweb
 spec:
-  replicas: 10
+  replicas: 3
   selector:
     matchLabels:
       app: lwweb
@@ -20,5 +20,4 @@ spec:
       containers:
         - image: vimal13/apache-webserver-php:v1
           name: apache-webserver-php
-          resources: {}
 status: {}
